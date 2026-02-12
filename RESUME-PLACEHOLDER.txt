@@ -1,0 +1,9 @@
+📄 ADD YOUR RESUME HERE
+
+1. Save your resume as: resume.pdf
+2. Place it in this folder (delete this placeholder file)
+3. Upload to GitHub
+
+The "View Resume" button in your portfolio links to: resume.pdf
+
+Without this file, the button won't work!
