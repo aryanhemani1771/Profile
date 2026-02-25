@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
-    <title>Aryan Hemani - Data Scientist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Hemani — Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,437 +14,420 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #0a0a0a;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            font-size: 16px;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
             min-width: 1200px;
         }
 
-        .container {
+        .layout {
             display: flex;
-            max-width: 1400px;
-            margin: 0 auto;
             min-height: 100vh;
         }
 
         /* Sidebar */
         .sidebar {
-            width: 320px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px 30px;
+            width: 300px;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            padding: 50px 30px;
+            border-right: 1px solid #e5e5e5;
+            background: #ffffff;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 0px;
+            display: none;
+        }
+
+        .sidebar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
         }
 
         .sidebar h1 {
-            color: #334155;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .sidebar .tagline {
-            color: #555;
-            font-size: 1em;
-            line-height: 1.7;
-            margin-bottom: 35px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            color: #0a0a0a;
         }
 
         .section-header {
-            color: #334155;
-            font-weight: 700;
-            font-size: 1.1em;
-            margin: 35px 0 20px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #334155;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 30px 0 15px 0;
+            font-weight: 500;
+            color: #666;
         }
 
-        /* Experience Timeline */
+        /* Timeline */
         .timeline-item {
-            margin-bottom: 30px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
             padding-left: 20px;
-            border-left: 3px solid #cbd5e1;
+            border-left: 2px solid #e0e0e0;
             position: relative;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -7px;
+            left: -6px;
             top: 5px;
-            width: 11px;
-            height: 11px;
-            background: #0ea5e9;
+            width: 10px;
+            height: 10px;
+            background: #666666;
             border-radius: 50%;
+            border: 2px solid #ffffff;
         }
 
         .timeline-date {
-            color: #0ea5e9;
-            font-size: 0.85em;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 6px;
         }
 
         .timeline-role {
-            font-weight: 700;
-            color: #333;
-            font-size: 1.05em;
+            font-size: 14px;
+            font-weight: 400;
             margin-bottom: 2px;
+            color: #0a0a0a;
+            line-height: 1.3;
         }
 
         .timeline-company {
+            font-size: 13px;
             color: #666;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-
-        .linkedin-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #0077B5;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .linkedin-btn:hover {
-            background: #005885;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,119,181,0.3);
+            font-weight: 300;
         }
 
         /* Main Content */
         .main-content {
-            margin-left: 320px;
+            margin-left: 300px;
+            padding: 50px 70px;
             flex: 1;
-            padding: 40px;
-            background: white;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
-            color: white;
-            padding: 35px 40px;
-            border-radius: 15px;
-            margin-bottom: 35px;
-            box-shadow: 0 5px 20px rgba(51,65,85,0.3);
+            margin-bottom: 50px;
         }
 
         .hero h2 {
-            font-size: 2em;
+            font-size: 52px;
+            font-weight: 300;
+            letter-spacing: -1px;
             margin-bottom: 10px;
-            font-weight: 600;
+            line-height: 1.1;
         }
 
-        .hero p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .hero .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 6px;
+            font-weight: 300;
         }
 
-        .hero-badges {
+        .hero .meta {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        .hero-actions {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .hero-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 25px;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 12px 28px;
+            font-size: 14px;
             text-decoration: none;
-            font-weight: 600;
+            border-radius: 4px;
             transition: all 0.3s ease;
-            font-size: 0.95em;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background: #0ea5e9;
-            color: white;
+            background: #0a0a0a;
+            color: #ffffff;
+            border: 1px solid #0a0a0a;
         }
 
         .btn-primary:hover {
-            background: #0284c7;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(14,165,233,0.4);
+            background: transparent;
+            color: #0a0a0a;
         }
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: #0a0a0a;
+            border: 1px solid #e5e5e5;
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.15);
+            border-color: #0a0a0a;
         }
 
-        /* Section Titles */
-        .section-title {
-            color: #334155;
-            font-size: 1.6em;
-            margin: 35px 0 25px 0;
-            font-weight: 600;
-            padding-bottom: 12px;
-            border-bottom: 3px solid #0ea5e9;
+        .btn-nav {
+            background: transparent;
+            color: #666;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            padding: 10px 20px;
         }
 
-        /* Impact Grid */
-        .impact-grid {
+        .btn-nav:hover {
+            border-color: #0a0a0a;
+            color: #0a0a0a;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 40px;
+            margin-bottom: 70px;
         }
 
-        .impact-card {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #0ea5e9;
-            transition: all 0.3s ease;
+        .stat-card {
+            padding: 20px 0 0 0;
         }
 
-        .impact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(14,165,233,0.2);
-        }
-
-        .impact-metric {
-            font-size: 1.5em;
-            font-weight: 600;
-            color: #0ea5e9;
-            margin-bottom: 8px;
-        }
-
-        .impact-description {
-            color: #555;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        /* Skills */
-        .skills-section {
-            margin: 30px 0;
-        }
-
-        .skill-category {
-            margin-bottom: 20px;
-        }
-
-        .skill-category-title {
-            color: #334155;
-            font-weight: 700;
-            margin-bottom: 12px;
-            font-size: 1em;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-badge {
-            background: #334155;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.85em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .skill-badge:hover {
-            background: #0ea5e9;
-            transform: translateY(-2px);
-        }
-
-        /* Projects */
-        .project-card {
-            background: #fafafa;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-left: 5px solid #0ea5e9;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(14,165,233,0.15);
-        }
-
-        .project-title {
-            color: #334155;
-            font-size: 1.3em;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .project-company {
-            color: #666;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .project-impact {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 3px solid #0ea5e9;
-        }
-
-        .project-impact-title {
-            font-weight: 700;
-            color: #0ea5e9;
+        .stat-card::before {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 2px;
+            background: #0a0a0a;
             margin-bottom: 5px;
-            font-size: 0.95em;
         }
 
-        .project-impact-text {
-            color: #555;
-            font-size: 0.9em;
+        .stat-number {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #666;
             line-height: 1.5;
+            font-weight: 300;
+            max-width: 85%;
         }
 
-        .project-description {
-            color: #555;
+        /* Section */
+        .section {
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+            font-weight: 500;
+            color: #999;
+        }
+
+        /* Work Items */
+        .work-item {
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 35px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-number {
+            font-size: 14px;
+            color: #999;
+            font-weight: 400;
+        }
+
+        .work-content h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .work-impact {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .work-description {
+            font-size: 15px;
+            color: #666;
             line-height: 1.7;
             margin-bottom: 15px;
         }
 
-        .project-tech {
+        .work-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 15px;
         }
 
-        .tech-tag {
-            background: white;
-            color: #334155;
-            padding: 6px 14px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            font-weight: 600;
-            border: 1px solid #cbd5e1;
+        .tag {
+            font-size: 11px;
+            color: #666;
+            padding: 5px 10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .skill-category h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 300;
         }
 
         /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
-            color: white;
-            padding: 50px;
-            border-radius: 15px;
+            margin-top: 100px;
+            padding: 60px 0;
+            border-top: 1px solid #e5e5e5;
             text-align: center;
-            margin-top: 40px;
         }
 
-        .contact-title {
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            font-weight: 700;
+        .contact-section h2 {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
         }
 
-        .contact-subtitle {
-            font-size: 1.1em;
+        .contact-section p {
+            font-size: 16px;
+            color: #666;
             margin-bottom: 30px;
-            opacity: 0.95;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 700px;
-            margin: 0 auto;
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
 
-        .contact-card {
-            background: white;
-            color: #334155;
-            padding: 20px;
-            border-radius: 10px;
+        .contact-link {
+            font-size: 15px;
+            color: #0a0a0a;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.95em;
+            border-bottom: 1px solid #0a0a0a;
+            transition: opacity 0.3s ease;
         }
 
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            background: #0ea5e9;
-            color: white;
+        .contact-link:hover {
+            opacity: 0.5;
         }
 
-        .contact-label {
-            display: block;
-            margin-top: 8px;
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="layout">
         <!-- Sidebar -->
-        <div class="sidebar">
+        <aside class="sidebar fade-in">
             <h1>Aryan Hemani</h1>
-            <p class="tagline">
-                Data scientist with expertise in machine learning, quantitative analysis, and statistical modeling — turning complex datasets into actionable insights.
-            </p>
 
             <div class="section-header">Experience</div>
             
             <div class="timeline-item">
-                <div class="timeline-date">Mar 2025 - Present</div>
+                <div class="timeline-date">Mar 2025 — Present</div>
                 <div class="timeline-role">Analyst</div>
                 <div class="timeline-company">Analysis Group</div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">Jun 2024 - Aug 2024</div>
+                <div class="timeline-date">Jun — Aug 2024</div>
                 <div class="timeline-role">Summer Analyst</div>
                 <div class="timeline-company">Analysis Group</div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">Jan 2024 - Jun 2024</div>
+                <div class="timeline-date">Jan — Jun 2024</div>
                 <div class="timeline-role">Data Science, Project Lead</div>
                 <div class="timeline-company">Wave Digital Assets</div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">Jul 2022 - Aug 2023</div>
+                <div class="timeline-date">Jul 2022 — Aug 2023</div>
                 <div class="timeline-role">Legislative Research Assistant</div>
                 <div class="timeline-company">Parliament of India</div>
             </div>
@@ -451,236 +437,184 @@
             <div class="timeline-item">
                 <div class="timeline-date">December 2024</div>
                 <div class="timeline-role">Master's, Quantitative Economics</div>
-                <div class="timeline-company">University of California, Los Angeles</div>
+                <div class="timeline-company">UCLA</div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-date">August 2022</div>
                 <div class="timeline-role">Bachelor's, Economics</div>
-                <div class="timeline-company">London School of Economics • First Class Honors</div>
+                <div class="timeline-company">LSE • First Class Honors</div>
             </div>
-
-            <a href="https://www.linkedin.com/in/aryan-hemani/" target="_blank" class="linkedin-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                View My LinkedIn
-            </a>
-        </div>
+        </aside>
 
         <!-- Main Content -->
-        <div class="main-content">
-            <!-- Hero Section -->
-            <div class="hero">
-                <h2>Data Scientist & Quantitative Analyst</h2>
-                <p>2+ years driving measurable impact through ML systems, advanced analytics, and scalable data pipelines</p>
+        <main class="main-content">
+            <!-- Hero -->
+            <div class="hero fade-in" style="animation-delay: 0.1s">
+                <h2>Data Scientist &<br>Quantitative Analyst</h2>
+                <p class="subtitle">2+ years driving measurable impact through ML systems, advanced analytics, and scalable data pipelines</p>
+                <p class="meta">Los Angeles, California</p>
                 
-                <div class="hero-badges">
-                    <span class="hero-badge">Analysis Group</span>
-                    <span class="hero-badge">UCLA Master's</span>
-                    <span class="hero-badge">LSE Bachelor's</span>
-                    <span class="hero-badge">Production ML</span>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="mailto:aryanhemani1771@gmail.com" class="btn btn-primary"> aryanhemani1771@gmail.com </a>
-                    <a href="Github Resume 2.pdf" class="btn btn-secondary">View Resume</a>
+                <div class="hero-actions">
+                    <a href="/cdn-cgi/l/email-protection#4524373c242b2d2028242b2c74727274052228242c296b262a28" class="btn btn-primary"><span class="__cf_email__" data-cfemail="c0a1b2b9a1aea8a5ada1aea9f1f7f7f180a7ada1a9aceea3afad">[email&#160;protected]</span></a>
+                    <a href="https://www.linkedin.com/in/aryan-hemani/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    <a href="#selected-work" class="btn btn-nav">Selected Work ↓</a>
+                    <a href="projects.html" class="btn btn-nav">Projects →</a>
                 </div>
             </div>
 
-            <!-- Impact Highlights -->
-            <h3 class="section-title">Proven Impact & Results</h3>
-            
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-metric">80+ Hours</div>
-                    <div class="impact-description">Saved per month with Azure ML pipeline for automated document processing</div>
+            <!-- Stats -->
+            <div class="stats-grid fade-in" style="animation-delay: 0.2s">
+                <div class="stat-card">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Hours saved per month with Azure ML pipeline</div>
                 </div>
-                <div class="impact-card">
-                    <div class="impact-metric">25% Boost</div>
-                    <div class="impact-description">Improved anomaly detection accuracy with neural network system</div>
+                <div class="stat-card">
+                    <div class="stat-number">1.2M+</div>
+                    <div class="stat-label">Posts processed via GPT-4 sentiment analysis</div>
                 </div>
-                <div class="impact-card">
-                    <div class="impact-metric">1.2M+ Posts</div>
-                    <div class="impact-description">Processed via GPT-4 sentiment analysis for customer insights</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-metric">20% Cost Cut</div>
-                    <div class="impact-description">Led team to deploy real-time ML system reducing processing costs</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-metric">40% Faster</div>
-                    <div class="impact-description">Optimized data processing for 4TB JSON datasets using Polars</div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-metric">170+ Bills</div>
-                    <div class="impact-description">Drafted legislative briefs using econometric modeling</div>
+                <div class="stat-card">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Accuracy boost in anomaly detection system</div>
                 </div>
             </div>
 
-            <!-- Skills Section -->
-            <h3 class="section-title">Technical Expertise</h3>
-            
-            <div class="skills-section">
-                <div class="skill-category">
-                    <div class="skill-category-title">Programming & Data</div>
-                    <div class="skills-container">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">R</span>
-                        <span class="skill-badge">SQL (Snowflake)</span>
-                        <span class="skill-badge">SAS</span>
-                        <span class="skill-badge">Bash</span>
-                        <span class="skill-badge">Git</span>
+            <!-- Selected Work -->
+            <div class="section" id="selected-work">
+                <div class="section-title">Selected Work</div>
+                
+                <div class="work-item">
+                    <div class="work-number">01</div>
+                    <div class="work-content">
+                        <h3>Production ML Pipeline for Document Intelligence</h3>
+                        <p class="work-impact">Saved 80+ hours/month • Analysis Group 2024-2025</p>
+                        <p class="work-description">
+                            Built end-to-end Kedro ETL pipeline to process unstructured, non-OCR PDFs. Trained custom Azure Document Intelligence model for automated data extraction and validation, deployed in production environment.
+                        </p>
+                        <div class="work-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Azure ML</span>
+                            <span class="tag">Kedro</span>
+                            <span class="tag">ETL</span>
+                            <span class="tag">Document AI</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <div class="skill-category-title">Machine Learning & AI</div>
-                    <div class="skills-container">
-                        <span class="skill-badge">Scikit-learn</span>
-                        <span class="skill-badge">XGBoost</span>
-                        <span class="skill-badge">PyTorch</span>
-                        <span class="skill-badge">NLP / LLMs</span>
-                        <span class="skill-badge">Time Series</span>
-                        <span class="skill-badge">Anomaly Detection</span>
-                        <span class="skill-badge">A/B Testing</span>
+                <div class="work-item">
+                    <div class="work-number">02</div>
+                    <div class="work-content">
+                        <h3>Large-Scale NLP Sentiment Analysis</h3>
+                        <p class="work-impact">1.2M+ posts processed • 85% accuracy • Analysis Group 2024-2025</p>
+                        <p class="work-description">
+                            Designed scalable web-scraping pipeline ingesting product reviews across platforms. Applied GPT-4 sentiment classification to generate time-series customer experience KPIs. Validated with confusion matrices (p<0.01).
+                        </p>
+                        <div class="work-tags">
+                            <span class="tag">GPT-4</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Web Scraping</span>
+                            <span class="tag">Statistical Testing</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <div class="skill-category-title">Data Engineering & Analytics</div>
-                    <div class="skills-container">
-                        <span class="skill-badge">Spark / PySpark</span>
-                        <span class="skill-badge">Airflow</span>
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">Kedro</span>
-                        <span class="skill-badge">ETL Pipelines</span>
-                        <span class="skill-badge">Databricks</span>
-                        <span class="skill-badge">Azure ML</span>
+                <div class="work-item">
+                    <div class="work-number">03</div>
+                    <div class="work-content">
+                        <h3>Real-Time Anomaly Detection System</h3>
+                        <p class="work-impact">25% detection improvement • Analysis Group 2024</p>
+                        <p class="work-description">
+                            Built statistical monitoring pipeline combining rolling regression and neural network models to detect suspicious transaction patterns. Deployed with automated alerting for fraud detection.
+                        </p>
+                        <div class="work-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Anomaly Detection</span>
+                            <span class="tag">Production Systems</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <div class="skill-category-title">Visualization & BI</div>
-                    <div class="skills-container">
-                        <span class="skill-badge">Power BI</span>
-                        <span class="skill-badge">Looker</span>
-                        <span class="skill-badge">Matplotlib</span>
-                        <span class="skill-badge">Excel</span>
+                <div class="work-item">
+                    <div class="work-number">04</div>
+                    <div class="work-content">
+                        <h3>Legislative Policy Analytics</h3>
+                        <p class="work-impact">12% gender pricing gap identified • Parliament of India 2022-2023</p>
+                        <p class="work-description">
+                            Analyzed large-scale pricing datasets using pooled OLS regression to identify gender-based price disparities. Findings directly influenced Pink Tax Prohibition Bill, 2023. Drafted 170+ legislative briefs using econometric modeling.
+                        </p>
+                        <div class="work-tags">
+                            <span class="tag">R</span>
+                            <span class="tag">Regression Analysis</span>
+                            <span class="tag">Statistical Modeling</span>
+                            <span class="tag">Policy Analytics</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Featured Projects -->
-            <h3 class="section-title">Featured Work</h3>
-
-            <div class="project-card">
-                <div class="project-title">Production ML Pipeline for Document Intelligence</div>
-                <div class="project-company">Analysis Group • 2024-2025</div>
-                
-                <div class="project-impact">
-                    <div class="project-impact-title">Business Impact</div>
-                    <div class="project-impact-text">
-                        Automated PDF data extraction saving 80+ hours/month of manual review; trained custom Azure Document Intelligence model deployed in production
+            <!-- Skills -->
+            <div class="section">
+                <div class="section-title">Technical Skills</div>
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <h4>Programming & Data</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>R</li>
+                            <li>SQL (Snowflake)</li>
+                            <li>SAS</li>
+                            <li>Bash</li>
+                            <li>Git</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="project-description">
-                    Built end-to-end ETL pipeline using Kedro framework to process unstructured, non-OCR'd PDFs. Designed and trained custom Azure ML model for automated extraction and validation, significantly reducing manual processing time while improving accuracy.
-                </div>
-                
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Azure ML</span>
-                    <span class="tech-tag">Kedro</span>
-                    <span class="tech-tag">ETL</span>
-                    <span class="tech-tag">Document AI</span>
+
+                    <div class="skill-category">
+                        <h4>ML & AI</h4>
+                        <ul>
+                            <li>Scikit-learn</li>
+                            <li>XGBoost</li>
+                            <li>PyTorch</li>
+                            <li>NLP / LLMs</li>
+                            <li>Time Series</li>
+                            <li>Anomaly Detection</li>
+                            <li>A/B Testing</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Data Engineering</h4>
+                        <ul>
+                            <li>Spark / PySpark</li>
+                            <li>Airflow</li>
+                            <li>Docker</li>
+                            <li>Kedro</li>
+                            <li>ETL Pipelines</li>
+                            <li>Databricks</li>
+                            <li>Azure ML</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Visualization & BI</h4>
+                        <ul>
+                            <li>Power BI</li>
+                            <li>Looker</li>
+                            <li>Matplotlib</li>
+                            <li>Excel</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-title">Large-Scale NLP Sentiment Analysis System</div>
-                <div class="project-company">Analysis Group • 2024-2025</div>
-                
-                <div class="project-impact">
-                    <div class="project-impact-title">Business Impact</div>
-                    <div class="project-impact-text">
-                        Processed 1.2M+ social media posts and reviews; generated actionable customer-experience KPIs with 85% model accuracy validated against human labels
-                    </div>
-                </div>
-                
-                <div class="project-description">
-                    Designed and deployed scalable web-scraping and analytics pipeline ingesting product reviews across multiple platforms. Applied GPT-4 based sentiment classification to generate time-series KPIs. Validated supervised and unsupervised LLM outputs using confusion matrices (p < 0.01 via K-S test).
-                </div>
-                
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">GPT-4</span>
-                    <span class="tech-tag">NLP</span>
-                    <span class="tech-tag">Web Scraping</span>
-                    <span class="tech-tag">Statistical Testing</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Real-Time Anomaly Detection System</div>
-                <div class="project-company">Analysis Group • 2024</div>
-                
-                <div class="project-impact">
-                    <div class="project-impact-title">Business Impact</div>
-                    <div class="project-impact-text">
-                        Improved suspicious transaction detection by 25%; deployed production monitoring pipeline processing real-time data streams
-                    </div>
-                </div>
-                
-                <div class="project-description">
-                    Built statistical monitoring pipeline combining rolling regression and neural network models to detect anomalous transaction patterns. Deployed system for real-time fraud detection with automated alerting, significantly improving detection accuracy over baseline methods.
-                </div>
-                
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Neural Networks</span>
-                    <span class="tech-tag">Time Series</span>
-                    <span class="tech-tag">Anomaly Detection</span>
-                    <span class="tech-tag">Production Systems</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Data-Driven Legislative Policy Design</div>
-                <div class="project-company">Parliament of India • 2022-2023</div>
-                
-                <div class="project-impact">
-                    <div class="project-impact-title">Business Impact</div>
-                    <div class="project-impact-text">
-                        Identified 12% gender-based pricing gap through regression analysis; supported drafting of Pink Tax Prohibition Bill, 2023
-                    </div>
-                </div>
-                
-                <div class="project-description">
-                    Analyzed large-scale pricing datasets using pooled OLS regression to quantify gender-based price discrimination. Findings directly informed legislative design of parliamentary bill. Drafted 170+ legislative briefs integrating econometric modeling, time series analysis, and predictive analytics.
-                </div>
-                
-                <div class="project-tech">
-                    <span class="tech-tag">R</span>
-                    <span class="tech-tag">Regression Analysis</span>
-                    <span class="tech-tag">Statistical Modeling</span>
-                    <span class="tech-tag">Policy Analytics</span>
-                </div>
-            </div>
-
-            <!-- Contact Section -->
+            <!-- Contact -->
             <div class="contact-section">
-                <div class="contact-title">Let's Connect</div>
-                <div class="contact-subtitle">Open to Data Scientist and Data Analyst opportunities</div>
-                
-                <div class="contact-grid">
-                    <a href="mailto:aryanhemani1771@gmail.com" class="contact-card">
-                        <div>📧</div>
-                        <span class="contact-label">Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aryan-hemani/" target="_blank" class="contact-card">
-                        <div>💼</div>
-                        <span class="contact-label">LinkedIn</span>
-                    </a>
-              
+                <h2>Let's work together</h2>
+                <p>Open to Data Scientist, Data Analyst, and ML/AI opportunities</p>
+                <div class="contact-links">
+                    <a href="/cdn-cgi/l/email-protection#58392a213936303d35393631696f6f69183f35393134763b3735" class="contact-link">Email</a>
+                    
