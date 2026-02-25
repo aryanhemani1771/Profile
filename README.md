@@ -1,205 +1,128 @@
-# Aryan Hemani - Data Science Portfolio
+# 🚀 SETUP GUIDE - Minimalist Portfolio
 
-Modern, professional portfolio website optimized for cold LinkedIn outreach and job applications.
+## 📦 What's Included:
+- index.html (main portfolio page)
+- projects.html (6 projects showcase)
+- images/ (all project images)
 
-## 🚀 Live Demo
-Once deployed: `https://aryanhemani1771.github.io/Portfolio/`
+## ⚠️ BEFORE UPLOADING:
+1. Add your resume as `resume.pdf` to this folder
+   - Use Resume_2.pdf (the cleaner one)
+   - Rename it to exactly: resume.pdf
 
-## ✨ Features
+## 📤 Upload to GitHub:
 
-- **Impact-First Design**: Quantified achievements visible immediately
-- **Modern Color Scheme**: Slate gray + cyan (professional data analytics aesthetic)
-- **Sidebar Layout**: Experience and education timeline always visible
-- **Mobile-Friendly**: Desktop layout that's zoomable on mobile
-- **Optimized for Recruiters**: Designed for 10-30 second scans
-- **Clean & Professional**: Perfect for data scientist/analyst roles
+### Option 1: Web Upload (Easiest)
+1. Go to: https://github.com/aryanhemani1771/Portfolio
+2. Delete old files OR create new repo
+3. Click "Add file" → "Upload files"
+4. Drag ALL files from this folder
+5. Commit changes
 
-## 📂 File Structure
-
-```
-Portfolio-Final/
-├── index.html          # Main portfolio page
-├── resume.pdf          # Your resume (ADD THIS FILE)
-├── images/             # Project screenshots and images
-├── LICENSE             # License file
-└── README.md           # This file
-```
-
-## 🛠️ Setup Instructions
-
-### Option 1: Upload to Existing GitHub Repo
-
-1. **Go to your GitHub repo**: https://github.com/aryanhemani1771/Portfolio
-
-2. **Delete old files** (or move to a backup folder):
-   - Delete `index.md`, `_config.yml`, `_layouts/`, etc.
-
-3. **Upload new files**:
-   - Click "Add file" → "Upload files"
-   - Drag and drop ALL files from `Portfolio-Final/`
-   - **IMPORTANT**: Add your `resume.pdf` to the root folder
-   - Commit changes
-
-4. **Enable GitHub Pages**:
-   - Go to Settings → Pages
-   - Source: `main` branch, `/ (root)` folder
-   - Save
-
-5. **Wait 2-3 minutes** - Your site will be live at:
-   `https://aryanhemani1771.github.io/Portfolio/`
-
-### Option 2: Using Git (Command Line)
-
+### Option 2: Git Command Line
 ```bash
-# Navigate to your local folder
-cd path/to/Portfolio-Final
-
-# Initialize git (if new folder)
+cd Portfolio-Minimalist-Final
 git init
-
-# Add all files
 git add .
-
-# Commit
-git commit -m "Updated portfolio with modern design"
-
-# Add remote (replace with your repo URL)
+git commit -m "New minimalist portfolio"
 git remote add origin https://github.com/aryanhemani1771/Portfolio.git
-
-# Push (this will overwrite existing files)
 git push -f origin main
 ```
 
-## 📄 Adding Your Resume
+## 🌐 Enable GitHub Pages:
+1. Go to Settings → Pages
+2. Source: `main` branch, `/ (root)`
+3. Click Save
+4. Wait 2-3 minutes
 
-**CRITICAL**: You MUST add your resume for the "View Resume" button to work!
+## ✅ Your URLs:
+- Main: https://aryanhemani1771.github.io/Portfolio/
+- Projects: https://aryanhemani1771.github.io/Portfolio/projects.html
 
-1. Save your resume as `resume.pdf`
-2. Place it in the **root folder** (same level as `index.html`)
-3. Push to GitHub
-
+## 📝 Files Structure:
 ```
 Portfolio/
-├── index.html
-├── resume.pdf    ← ADD THIS
-└── images/
+├── index.html           ← Main portfolio (GitHub auto-detects this)
+├── projects.html        ← Projects page
+├── resume.pdf          ← ADD THIS (your resume)
+├── images/             ← Project screenshots
+│   ├── Screenshot 2024-04-16 122044.png
+│   ├── Screenshot 2024-04-16 122058.png
+│   ├── hyperparameter-heatmap.png
+│   ├── conversion-rate-by-day.png
+│   ├── conversion-rates-by-test-group.png
+│   └── conversion-rate-by-hour.png
+└── README.md           ← This file
 ```
 
-## ✏️ Making Changes After Upload
+## 🎯 Key Features:
+- Minimalist black & white design
+- Sidebar with experience + education (always visible)
+- 3 impact stats above the fold
+- 4 detailed "Selected Work" projects on main page
+- 6 total projects on separate projects page
+- Mobile-friendly (desktop-optimized)
 
-### Update Email
-Find line ~483 in `index.html`:
-```html
-<a href="mailto:aryanhemani1771@gmail.com" class="btn btn-primary">aryanhemani1771@gmail.com</a>
-```
+## 🔗 Button Functions:
+- [Email] → Opens email client
+- [LinkedIn] → Your LinkedIn profile
+- [Selected Work ↓] → Scrolls to projects section
+- [Projects →] → Opens projects.html page
 
-### Update LinkedIn
-Find all instances of:
-```html
-https://www.linkedin.com/in/aryan-hemani/
-```
+## ✏️ Making Changes:
 
-### Update GitHub
-Find all instances of:
-```html
-https://github.com/aryanhemani1771
-```
+### Update Email:
+Find: `aryanhemani1771@gmail.com`
+Replace with your new email in both files
 
-### Add/Remove Projects
-Find the "Featured Work" section (around line 520) and copy/paste project cards.
+### Update LinkedIn:
+Find: `https://www.linkedin.com/in/aryan-hemani/`
+Replace with your LinkedIn URL
 
-### Update Skills
-Find the skills section (around line 500) and add/remove skill badges.
+### Update GitHub:
+Find: `https://github.com/aryanhemani1771`
+Replace with your GitHub URL
 
-## 🎨 Color Scheme
+## 🆘 Troubleshooting:
 
-- **Slate Gray**: `#334155` (headers, text)
-- **Cyan**: `#0ea5e9` (accents, highlights)
-- **Light Blue**: Backgrounds for impact cards
-- **White/Gray**: Clean backgrounds
+**Resume button not working?**
+- Make sure `resume.pdf` is in root folder (not in subfolder)
+- Check filename is exactly `resume.pdf` (lowercase)
 
-To change colors, find and replace hex codes in `index.html`.
+**Images not showing?**
+- Verify all images are in `images/` folder
+- Check image filenames match exactly (including %20 for spaces)
 
-## 📱 How It Looks
+**Projects button not working?**
+- Make sure `projects.html` is uploaded to same folder as `index.html`
 
-- **Desktop**: Sidebar (left) + Main content (right)
-- **Mobile**: Same layout, users can zoom and pan
-- **Optimized for**: LinkedIn cold outreach, recruiter scans
-
-## 🔧 Troubleshooting
-
-### Resume button not working?
-- Make sure `resume.pdf` is in the root folder
-- Check the filename is exactly `resume.pdf` (lowercase)
-
-### Images not showing?
-- Verify images are in the `images/` folder
-- Check image filenames match exactly (including spaces and %20)
-
-### Site not updating?
-- Clear browser cache (Ctrl+Shift+R or Cmd+Shift+R)
+**Site not updating?**
 - Wait 5-10 minutes for GitHub Pages to rebuild
-- Check Actions tab in GitHub for build status
+- Clear browser cache (Ctrl+Shift+R or Cmd+Shift+R)
 
-### Layout looks broken?
-- Make sure you uploaded ALL files including `index.html`
-- Don't modify the HTML structure without testing
+## 📧 LinkedIn Cold Outreach Template:
 
-## 📧 Using for Cold Outreach
-
-**LinkedIn Message Template**:
 ```
 Hi [Name],
 
 I noticed [Company] is hiring for [Role]. I'm a Data Scientist with 2+ years 
-driving measurable impact through ML systems at Analysis Group.
+driving measurable impact at Analysis Group.
 
 Recent wins:
-• Built production ML pipeline → Saved 80+ hours/month
-• Deployed anomaly detection → 25% accuracy boost
-• Processed 1.2M+ posts via NLP for customer insights
+• ML pipeline → Saved 80+ hours/month
+• NLP analysis → 1.2M+ posts processed
+• Anomaly detection → 25% accuracy boost
 
 Portfolio: https://aryanhemani1771.github.io/Portfolio/
 
-Would love to discuss how I can contribute to [Company's] data team.
+Happy to discuss how I can contribute to [Company's] data team.
 
 Best,
 Aryan
 ```
 
-## 📊 What Recruiters See
-
-**First 5 seconds**:
-- Your name + title
-- Education credentials (UCLA Master's, LSE)
-- Email button
-
-**First 30 seconds**:
-- 6 quantified impact stats
-- Experience timeline
-- Technical skills
-
-**If interested (60+ seconds)**:
-- 4 detailed projects
-- Full skill breakdown
-- Contact options
-
-## 🎯 Best Practices
-
-1. **Keep resume updated** - Replace `resume.pdf` monthly
-2. **Test on mobile** - Open on your phone to verify
-3. **Update impact stats** - Add new achievements as they happen
-4. **Track analytics** - Consider adding Google Analytics
-5. **A/B test** - Try different project orders based on role type
-
-## 📝 License
-
-Unlicense - Free to use, modify, and distribute
-
 ---
 
-**Questions?** Email: aryanhemani1771@gmail.com
+**Ready to land that job in 30 days!** 🚀
 
-**Built with**: HTML, CSS, modern design principles for data professionals
-
-⭐ **Good luck with your job search!**
+© 2025 Aryan Hemani
