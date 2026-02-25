@@ -28,7 +28,7 @@ Recent wins:
 • NLP analysis → 1.2M+ posts processed
 • Anomaly detection → 25% accuracy boost
 
-Portfolio: https://aryanhemani1771.github.io/Portfolio/
+Portfolio: https://aryanhemani1771.github.io/Profile/
 
 Happy to discuss how I can contribute to [Company's] data team.
 
@@ -38,6 +38,5 @@ Aryan
 
 ---
 
-**Ready to land that job in 30 days!** 🚀
 
 © 2025 Aryan Hemani
