@@ -14,28 +14,6 @@
 - 6 total projects on separate projects page
 - Mobile-friendly (desktop-optimized)
 
-
-## LinkedIn Cold Outreach Template:
-
-```
-Hi [Name],
-
-I noticed [Company] is hiring for [Role]. I'm a Data Scientist with 2+ years 
-driving measurable impact at Analysis Group.
-
-Recent wins:
-• ML pipeline → Saved 80+ hours/month
-• NLP analysis → 1.2M+ posts processed
-• Anomaly detection → 25% accuracy boost
-
-Portfolio: https://aryanhemani1771.github.io/Profile/
-
-Happy to discuss how I can contribute to [Company's] data team.
-
-Best,
-Aryan
-```
-
 ---
 
 
