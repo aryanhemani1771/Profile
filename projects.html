@@ -199,6 +199,30 @@
             <p>Data Science, Machine Learning, and NLP projects showcasing end-to-end implementations from research to deployment.</p>
         </div>
 
+        <!-- Project 0: ApexSignal F1 -->
+        <div class="project" id="apexsignal-f1">
+            <div class="project-header">
+                <h2>ApexSignal F1 — Prediction-Market Sports Pricing Engine</h2>
+            </div>
+            <p class="project-description">
+                End-to-end research platform that prices Formula 1 prediction-market contracts (win, podium, points, DNF, safety car). Combines Elo driver ratings with a Plackett&ndash;Luce ranking model and a vectorized Monte Carlo simulator (~5,000 seeded race paths in ~0.2s), calibrated with isotonic regression. Walk-forward validation across 102 real races (2022&ndash;2026) scored a 0.028 Brier &mdash; roughly half the error of a random baseline &mdash; on 639 held-out driver-race predictions. Read-only Kalshi and Polymarket adapters pull contract quotes for fair-value comparison against model probabilities, and a fractional-Kelly allocator sizes paper-only positions under VaR and expected-shortfall limits, all on a leakage-safe FastF1 pipeline with point-in-time timestamps enforced by tests. Shipped as an interactive Streamlit dashboard and FastAPI service with Docker and a 130+ test GitHub Actions CI pipeline. Strictly paper-trading &mdash; no live execution.
+            </p>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Monte Carlo Simulation</span>
+                <span class="tag">Elo &amp; Plackett&ndash;Luce</span>
+                <span class="tag">Isotonic Calibration</span>
+                <span class="tag">Kalshi &amp; Polymarket APIs</span>
+                <span class="tag">Fractional Kelly</span>
+                <span class="tag">VaR / Expected Shortfall</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Docker</span>
+                <span class="tag">CI/CD</span>
+            </div>
+            <a href="https://github.com/aryanhemani1771/apexsignal-f1" target="_blank" class="project-link">View on GitHub →</a>
+        </div>
+
         <!-- Project 1: Sentiment Analysis -->
         <div class="project">
             <div class="project-header">
